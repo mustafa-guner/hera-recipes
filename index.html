@@ -11,76 +11,141 @@
     <!--Css folder link-->
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="./public/css/nav.css">
+    <link rel="stylesheet" href="./public/css/recipe.css">
+    <link rel="stylesheet" href="./public/css/popular.css">
+
 
 </head>
 
 <body>
 
-   
-    <main>
-         <!--Side navbar-->
-        <nav>
-            <div class="logo-block">
-                <img src="./public//images//logo.png">
-            </div>
-            <ul class="navbar-links">
-                <li class="navbar-link active">
-                    <a href="#">Home</a>
-                </li>
-                <li class="navbar-link">
-                    <a href="#">Recipes</a>
-                </li>
-                <li class="navbar-link">
-                    <a href="#">About</a>
-                </li>
-                <li class="navbar-link">
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </nav> <!--Side navbar Ends-->
+    <nav>
+        <!--Side navbar-->
+        <div class="logo-block">
+            <img src="./public//images//logo.png">
+        </div>
+        <ul class="navbar-links">
+            <li class="navbar-link active">
+                <a href="#">Home</a>
+            </li>
+            <li class="navbar-link">
+                <a href="#">Recipes</a>
+            </li>
+            <li class="navbar-link">
+                <a href="#">About</a>
+            </li>
+            <li class="navbar-link">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!--Side navbar Ends-->
 
 
+    <main class="main-content">
         <!--Header Container-->
-        <header>
+        <header class="panel">
             <div class="container">
                 <div class="header-image">
                     <img src="./public/images/denemelik3.png">
                     <div class="header-heading">
                         DELICIOUS<span>.</span>
                     </div>
+                    <div class="scroll-circle">
+                        <span id="text">
+                            Scroll Down ● Scroll Down ● Scroll Down ● Scroll Down ●
+                        </span>
+                        <div class="arrow-right">
+                            ➛
+                        </div>
+                    </div>
                 </div>
             </div>
-        </header>  <!--Header Container Ends-->
+        </header>
+        <!--Header Container Ends-->
 
-        
-        <!--Scroll Alert Circle-->
-        <div class="scroll-circle">
-            <span id="text">
-                Scroll Down ● Scroll Down ● Scroll Down ● Scroll Down 
-            </span>
-            <div class="arrow-right">
-                ➛
+
+        <section class="panel">
+            <h1 class="popular-header">Most Populars</h1>
+            <div class="popular-recipes-container">
+                
+                <div class="popular-recipe-card">
+                    <div class="popular-recipe-header">
+                        <div class="recipe-name">
+                            Margarita Pizza
+                        </div>
+                        <div class="popular-recipe-image">
+                            <img src="./public/images/pizza-product.png">
+                        </div>
+                        <div class="popular-recipe-brief-informations">
+                            <div class="popular-recipe-text recipe-rank">
+                                4.5 <span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-recipe-button">
+                        <a href="#">More</a>
+                    </div>
+                </div>
+
+                <div class="popular-recipe-card">
+                    <div class="popular-recipe-header">
+                        <div class="recipe-name">
+                            Margarita Pizza
+                        </div>
+                        <div class="popular-recipe-image">
+                            <img src="./public/images/pizza-product.png">
+                        </div>
+                        <div class="popular-recipe-brief-informations">
+                            <div class="popular-recipe-text recipe-rank">
+                                4.5 <span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-recipe-button">
+                        <a href="#">More</a>
+                    </div>
+                </div>
+
+                <div class="popular-recipe-card">
+                    <div class="popular-recipe-header">
+                        <div class="recipe-name">
+                            Margarita Pizza
+                        </div>
+                        <div class="popular-recipe-image">
+                            <img src="./public/images/pizza-product.png">
+                        </div>
+                        <div class="popular-recipe-brief-informations">
+                            <div class="popular-recipe-text recipe-rank">
+                                4.5 <span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="popular-recipe-button">
+                        <a href="#">More</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!--Scroll Alert Circle Ends-->
+        </section>
+
+  
     </main>
 
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <!--New Circle type for the scroll animated circle-->
+    <script src="./public/js/circletype.min.js"></script>
+    <script src="./public/js/ScrollAnimatedCircle.js"></script>
 
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
 
-
-    <!--Local JS folders-->
     <script src="./public/js/UI.js"></script>
     <script src="/public//js/ScrollTriggerXAxis.js"></script>
 
-    
-    <!--New Circle type for the scroll animated circle-->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="./public/js/circletype.min.js"></script>
-    <script src="./public/js/ScrollAnimatedCircle.js"></script>
-   
-   
-    
+
+
 </body>
 
 </html>

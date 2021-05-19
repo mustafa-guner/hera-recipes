@@ -1,0 +1,52 @@
+main{
+    .panel{
+        height: 100vh;
+        .popular-header{
+            margin-top: 1rem;
+            text-align: center;
+        }
+        .popular-recipes-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            padding: 1rem;
+            .popular-recipe-card{
+                margin: 1rem 0;
+                .popular-recipe-header{
+                    text-align: center;
+                    .popular-recipe-name{
+
+                    }
+                    .popular-recipe-image{
+                        width: 100px;
+                        margin: 0 auto;
+                        height: 100px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .popular-recipe-brief-informations{
+                        display: flex;
+                       justify-content: center;
+                     
+                       .popular-recipe-text{span {color: var(--pink);}}
+                    }
+                }
+                .popular-recipe-button{
+                    text-align: center;
+                    margin: 1rem 0;
+                    a{
+                        border: none;
+                        color: #fff;
+                        padding: .5rem 1rem;
+                        background-color: var(--nav-bar-backgroundColor);
+                    }
+                }
+            }
+        }
+    }
+}

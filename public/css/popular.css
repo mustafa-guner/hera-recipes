@@ -1,0 +1,73 @@
+main .panel {
+  height: 100vh;
+}
+
+main .panel .popular-header {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+main .panel .popular-recipes-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  padding: 1rem;
+}
+
+main .panel .popular-recipes-container .popular-recipe-card {
+  margin: 1rem 0;
+}
+
+main .panel .popular-recipes-container .popular-recipe-card .popular-recipe-header {
+  text-align: center;
+}
+
+main .panel .popular-recipes-container .popular-recipe-card .popular-recipe-header .popular-recipe-image {
+  width: 100px;
+  margin: 0 auto;
+  height: 100px;
+}
+
+main .panel .popular-recipes-container .popular-recipe-card .popular-recipe-header .popular-recipe-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .panel .popular-recipes-container .popular-recipe-card .popular-recipe-header .popular-recipe-brief-informations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .panel .popular-recipes-container .popular-recipe-card .popular-recipe-header .popular-recipe-brief-informations .popular-recipe-text span {
+  color: var(--pink);
+}
+
+main .panel .popular-recipes-container .popular-recipe-card .popular-recipe-button {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+main .panel .popular-recipes-container .popular-recipe-card .popular-recipe-button a {
+  border: none;
+  color: #fff;
+  padding: .5rem 1rem;
+  background-color: var(--nav-bar-backgroundColor);
+}
+/*# sourceMappingURL=popular.css.map */

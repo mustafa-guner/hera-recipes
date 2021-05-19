@@ -1,67 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Monoton&display=swap');
-main{
-    nav{
-        position: fixed;
-        left: 0;
-        border-right: 0.1px solid rgba(235, 232, 232, 0.295);
-        width: 110px;
-        bottom: 0;
-        top: 0;
-        height: 100%;
-        background-color: var(--nav-bar-backgroundColor);
+
+nav{
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    border-right: 0.1px solid rgba(235, 232, 232, 0.295);
+    width: 110px;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--nav-bar-backgroundColor);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    .logo-block{
+        
         display: flex;
         justify-content: center;
         flex-direction: column;
-        overflow: hidden;
-        .logo-block{
-            
+        align-items: center;
+        padding: 1rem;
+       
+      
+        img{
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            padding: 1rem;
-           
-          
-            img{
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-        .navbar-links{
+            width: 100%;
             height: 100%;
-           align-items: center;
-           list-style: none;
-           display: grid;
-           grid-template-rows: repeat(4,1fr);
-           justify-content: center;
-           align-content: center;
-            .navbar-link{
-                cursor: pointer;
-                justify-self: center;
-                overflow: hidden;
-                padding: 4rem;
-                transform: rotate(-90deg);
-                align-content: center;
-                align-items: center;
-                a{ color:#fff;}
-               }
-            .navbar-link.active{
-                background-color: #fff;
-            }
-            .navbar-link.active a{
-                color:var(--nav-bar-backgroundColor);
-            }
+            object-fit: cover;
         }
     }
+    .navbar-links{
+        height: 100%;
+       align-items: center;
+       list-style: none;
+       display: grid;
+       grid-template-rows: repeat(4,1fr);
+       justify-content: center;
+       align-content: center;
+        .navbar-link{
+            cursor: pointer;
+            justify-self: center;
+            overflow: hidden;
+            padding: 4rem;
+            transform: rotate(-90deg);
+            align-content: center;
+            align-items: center;
+            a{ color:#fff;}
+           }
+        .navbar-link.active{
+            background-color: #fff;
+        }
+        .navbar-link.active a{
+            color:var(--nav-bar-backgroundColor);
+        }
+    }
+}
+
+main{
+     min-width: 100%;
+    position: relative;
+    display: flex;
    header{
-    
+       width: 200%;
        .container{
+        overflow-y: hidden;
         flex-direction:column;
         align-items: center;
         display: flex;
@@ -96,39 +103,36 @@ main{
                        color: var(--pink);
                    }
                }
+               .scroll-circle{
+                 
+                 transform: rotate(200deg);
+                 -moz-transform:rotate(200deg);
+                  -webkit-transform:rotate(200deg);
+                  -o-transform:rotate(200deg);
+                  -ms-transform:rotate(200deg);
+                   animation: circleRotation 12s infinite linear;
+                  -webkit-animation: circleRotation 12s infinite linear;
+                
+                  #text{
+                  font-family: 'Limelight', cursive;
+                  font-family: 'Monoton', cursive;
+                  color: #fff;
+                  font-size: 1.3em;
+                  transition: .1 ease-out;
+                 }
+                 .arrow-right{
+                     position: absolute;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%,-50%);
+                     color: #fff;
+                     font-size: 2rem;
+                 }
+             }
            }
        }
    }
-   .scroll-circle{
-       top: 40%;
-       position: absolute;
-       right: 160px;
-
-       transform: rotate(200deg);
-       -moz-transform:rotate(200deg);
-        -webkit-transform:rotate(200deg);
-        -o-transform:rotate(200deg);
-        -ms-transform:rotate(200deg);
-         animation: circleRotation 12s infinite linear;
-        -webkit-animation: circleRotation 12s infinite linear;
-      
-       
-        #text{
-        font-family: 'Limelight', cursive;
-        font-family: 'Monoton', cursive;
-        color: #fff;
-        font-size: .5em;
-        transition: .1 ease-out;
-       }
-       .arrow-right{
-           position: absolute;
-           top: 50%;
-           left: 50%;
-           transform: translate(-50%,-50%);
-           color: #fff;
-           font-size: 2rem;
-       }
-   }
+ 
 
    @keyframes circleRotation {
     0% {

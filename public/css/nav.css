@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Limelight&family=Monoton&display=swap");
-main nav {
+nav {
   position: fixed;
   left: 0;
+  z-index: 1;
   border-right: 0.1px solid rgba(235, 232, 232, 0.295);
   width: 110px;
   bottom: 0;
@@ -22,7 +23,7 @@ main nav {
   overflow: hidden;
 }
 
-main nav .logo-block {
+nav .logo-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +40,7 @@ main nav .logo-block {
   padding: 1rem;
 }
 
-main nav .logo-block img {
+nav .logo-block img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +60,7 @@ main nav .logo-block img {
      object-fit: cover;
 }
 
-main nav .navbar-links {
+nav .navbar-links {
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -76,7 +77,7 @@ main nav .navbar-links {
       align-content: center;
 }
 
-main nav .navbar-links .navbar-link {
+nav .navbar-links .navbar-link {
   cursor: pointer;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -91,19 +92,32 @@ main nav .navbar-links .navbar-link {
           align-items: center;
 }
 
-main nav .navbar-links .navbar-link a {
+nav .navbar-links .navbar-link a {
   color: #fff;
 }
 
-main nav .navbar-links .navbar-link.active {
+nav .navbar-links .navbar-link.active {
   background-color: #fff;
 }
 
-main nav .navbar-links .navbar-link.active a {
+nav .navbar-links .navbar-link.active a {
   color: var(--nav-bar-backgroundColor);
 }
 
+main {
+  min-width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main header {
+  width: 200%;
+}
+
 main header .container {
+  overflow-y: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -163,10 +177,7 @@ main header .container .header-image .header-heading span {
   color: var(--pink);
 }
 
-main .scroll-circle {
-  top: 40%;
-  position: absolute;
-  right: 160px;
+main header .container .header-image .scroll-circle {
   transform: rotate(200deg);
   -moz-transform: rotate(200deg);
   -webkit-transform: rotate(200deg);
@@ -176,16 +187,16 @@ main .scroll-circle {
   -webkit-animation: circleRotation 12s infinite linear;
 }
 
-main .scroll-circle #text {
+main header .container .header-image .scroll-circle #text {
   font-family: 'Limelight', cursive;
   font-family: 'Monoton', cursive;
   color: #fff;
-  font-size: .5em;
+  font-size: 1.3em;
   -webkit-transition: .1 ease-out;
   transition: .1 ease-out;
 }
 
-main .scroll-circle .arrow-right {
+main header .container .header-image .scroll-circle .arrow-right {
   position: absolute;
   top: 50%;
   left: 50%;
