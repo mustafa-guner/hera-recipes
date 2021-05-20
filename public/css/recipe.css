@@ -1,9 +1,6 @@
 main .panel .recipes-container {
-  margin-left: 150px;
-  width: 100vw;
   display: -ms-grid;
   display: grid;
-  height: 100vh;
   -ms-grid-columns: (300px)[4];
       grid-template-columns: repeat(4, 300px);
   -webkit-box-pack: center;

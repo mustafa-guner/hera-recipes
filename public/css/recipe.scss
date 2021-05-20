@@ -1,10 +1,7 @@
 main{
     .panel{
         .recipes-container{
-            margin-left: 150px;
-            width: 100vw;
             display: grid;
-            height: 100vh;
             grid-template-columns: repeat(4,300px);
             justify-content: center;
             grid-gap: 30px;
