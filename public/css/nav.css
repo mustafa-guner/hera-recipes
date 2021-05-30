@@ -77,7 +77,7 @@ nav .navbar-links {
       align-content: center;
 }
 
-nav .navbar-links .navbar-link {
+nav .navbar-links li {
   cursor: pointer;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -92,19 +92,19 @@ nav .navbar-links .navbar-link {
           align-items: center;
 }
 
-nav .navbar-links .navbar-link a {
+nav .navbar-links li a {
   color: #fff;
 }
 
-nav .navbar-links .navbar-link.active {
+nav .navbar-links li.active {
   background-color: #fff;
 }
 
-nav .navbar-links .navbar-link.active a {
+nav .navbar-links li.active a {
   color: var(--nav-bar-backgroundColor);
 }
 
-#nav2 {
+#menu {
   position: fixed;
   right: 0;
   z-index: 1;
@@ -127,7 +127,7 @@ nav .navbar-links .navbar-link.active a {
   overflow: hidden;
 }
 
-#nav2 .logo-block {
+#menu .logo-block {
   color: #FFF;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,7 +145,7 @@ nav .navbar-links .navbar-link.active a {
   padding: 1rem;
 }
 
-#nav2 .logo-block img {
+#menu .logo-block img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,7 +165,7 @@ nav .navbar-links .navbar-link.active a {
      object-fit: cover;
 }
 
-#nav2 form {
+#menu form {
   color: #fff;
   height: 100%;
   -webkit-box-align: center;
@@ -183,16 +183,16 @@ nav .navbar-links .navbar-link.active a {
       align-content: center;
 }
 
-#nav2 form .menu-header-flag {
+#menu form .menu-header-flag {
   background-color: #fff;
   color: var(--nav-bar-backgroundColor);
   width: 230px;
-  padding: .5rem 0;
+  padding: .5rem .2rem;
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
-#nav2 form .search-form {
+#menu form .search-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,10 +200,11 @@ nav .navbar-links .navbar-link.active a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 2rem 0;
   height: 100%;
 }
 
-#nav2 form .search-form-button {
+#menu form .search-form-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,12 +213,31 @@ nav .navbar-links .navbar-link.active a {
           justify-content: center;
 }
 
-#nav2 form .search-form-button button {
+#menu form .search-form-button button {
   background-color: var(--pink);
   color: #fff;
   text-transform: uppercase;
   padding: .8rem 2rem;
   cursor: pointer;
   border: none;
+}
+
+#menu form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  margin-top: 3rem;
+  padding: .2rem 0;
+  margin-left: .5rem;
+}
+
+#menu form input:focus {
+  outline: none;
+}
+
+#menu form input[type="number"] {
+  width: 30px;
+  text-align: center;
 }
 /*# sourceMappingURL=nav.css.map */

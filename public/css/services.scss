@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+main{
+    .services-panel{
+       
+        .jumbotron{
+            margin-left: 3.2rem;
+          
+            width: 100%;
+            height: 300px;
+           .jumbotron-header{
+            text-align: center;
+            font-size: 2rem;
+            padding: 1rem;
+            span{
+                font-family: 'Pattaya', sans-serif;
+            }
+           }
+
+           .vitrain-content{
+               width: 100%;
+               height: 100%;
+               display: flex;
+               justify-content: center;
+               flex-wrap: wrap;
+               .vitrain-image{
+                   position: relative;
+                   width: 330px;
+                   height:100%;
+                   background-color: var(--main-container-backgroundColor);
+                   overflow: hidden;
+                   
+                   img{
+                       width: 100%;
+                       height: 100%;
+                       object-fit: cover;
+                   }
+                   .overlay{
+                       
+                   }
+                   .image-description{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.432);
+                       visibility: hidden;
+                       display: flex;
+                       justify-content: center;
+                       flex-direction: column;
+                       align-items: center;
+                       height: 100%;
+                       color: #fff;
+                       z-index: 1;
+                       font-size: 2rem;
+                       .chief-stars{
+                           text-align: center;
+                           width: 150px;
+                           padding: .5rem;
+                           margin: 0 auto;
+                           display: flex;
+                           justify-content: center;
+                           border-bottom: 3px solid var(--pink);
+                           i{
+                               color: gold;
+                               font-size: 1.3rem;
+                           }
+                       }
+                       .chief-name{
+                            text-align: center;
+                            margin: 0 auto;
+                            font-size: 1.4rem;
+                            padding: .4rem ;
+                       }
+                       .preview{
+                           display: flex;
+                           justify-content: center;
+                           flex-direction: column;
+                           align-items: center;
+                           p,i{
+                               font-size: 1rem;
+                           }
+                       }
+                   }
+                   &:hover{
+                    cursor: pointer;
+                   }
+                   &:hover .overlay, &:hover .image-description{
+                    
+                   visibility: visible;
+                   }
+                 
+                   
+               }
+
+           }
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 1366px) {
+    main{
+       
+        .services-panel{
+           
+            .jumbotron{
+               
+    
+               .vitrain-content{
+
+                   .vitrain-image{
+                   
+                       width: 240px;
+                    
+                      
+                   }
+    
+               }
+    
+            }
+        }
+    }
+}

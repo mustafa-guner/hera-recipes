@@ -1,16 +1,17 @@
 main .panel .recipes-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (300px)[4];
-      grid-template-columns: repeat(4, 300px);
+  -ms-grid-columns: (300px)[3];
+      grid-template-columns: repeat(3, 300px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  grid-gap: 30px;
-  margin-top: 1.5rem;
+  grid-gap: 40px;
+  margin-top: 3rem;
 }
 
 main .panel .recipes-container .recipe-card {
+  border: 1px solid rgba(155, 154, 154, 0.438);
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;

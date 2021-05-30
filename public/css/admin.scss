@@ -1,0 +1,109 @@
+
+    .login-page{
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        .login-screen{
+            height: 630px;
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            .logo{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                text-align: center;
+                img{
+                    margin: 0 auto;
+                    width: 130px;
+                }
+                h1{
+                    font-weight: 300 !important;
+                    background-color: #fff;
+                }
+                
+            }
+            .form-block{
+                width: 250px;
+                
+            form{
+                width: 100%;
+                .form-element{
+                    display: flex;
+                    flex-direction: column;
+                    align-items:flex-start;
+                    margin-top: 1rem;
+                    input{
+                        width: 100%;
+                        border: none;
+                        border-bottom: 2px solid black;
+                        padding: .4rem 1rem;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    label{
+                        font-size: 1.2rem;
+                        padding: .8rem 0;
+                    }
+                }
+                button{
+                    margin-top: 1.2rem;
+                    padding: .4rem 2rem;
+                    border: none;
+                    background-color: black;
+                    color: #fff;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    border-radius: 13px;
+                    transition:all  .4s ease-out;
+                }
+            }
+         }
+           
+        }
+        .greeting-screen{
+            position: relative;
+            width: 70%;
+            background-image: url("../images/restaurant.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            .overlay{
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.349);
+            }
+            .greetings-msg{
+                padding: 1rem;
+                z-index: 1;
+                // background-color: rgba(0, 0, 0, 0.445);
+                width: 850px;
+                h1{
+                    color: #fff;
+                    font-size: 3rem;
+                    font-weight: 200;
+                    span{
+                        font-weight: 900;
+                    }
+                }
+                p{
+                    color: #fff;
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+

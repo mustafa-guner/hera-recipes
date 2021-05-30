@@ -1,0 +1,155 @@
+.login-page {
+  font-family: 'Roboto', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login-page .login-screen {
+  height: 630px;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-page .login-screen .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+.login-page .login-screen .logo img {
+  margin: 0 auto;
+  width: 130px;
+}
+
+.login-page .login-screen .logo h1 {
+  font-weight: 300 !important;
+  background-color: #fff;
+}
+
+.login-page .login-screen .form-block {
+  width: 250px;
+}
+
+.login-page .login-screen .form-block form {
+  width: 100%;
+}
+
+.login-page .login-screen .form-block form .form-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.login-page .login-screen .form-block form .form-element input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: .4rem 1rem;
+}
+
+.login-page .login-screen .form-block form .form-element input:focus {
+  outline: none;
+}
+
+.login-page .login-screen .form-block form .form-element label {
+  font-size: 1.2rem;
+  padding: .8rem 0;
+}
+
+.login-page .login-screen .form-block form button {
+  margin-top: 1.2rem;
+  padding: .4rem 2rem;
+  border: none;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 13px;
+  -webkit-transition: all  .4s ease-out;
+  transition: all  .4s ease-out;
+}
+
+.login-page .greeting-screen {
+  position: relative;
+  width: 70%;
+  background-image: url("../images/restaurant.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-page .greeting-screen .overlay {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.349);
+}
+
+.login-page .greeting-screen .greetings-msg {
+  padding: 1rem;
+  z-index: 1;
+  width: 850px;
+}
+
+.login-page .greeting-screen .greetings-msg h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.login-page .greeting-screen .greetings-msg h1 span {
+  font-weight: 900;
+}
+
+.login-page .greeting-screen .greetings-msg p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+/*# sourceMappingURL=admin.css.map */

@@ -43,7 +43,7 @@ nav{
        grid-template-rows: repeat(4,1fr);
        justify-content: center;
        align-content: center;
-        .navbar-link{
+        li{
             cursor: pointer;
             justify-self: center;
             overflow: hidden;
@@ -53,16 +53,16 @@ nav{
             align-items: center;
             a{ color:#fff;}
            }
-        .navbar-link.active{
+        li.active{
             background-color: #fff;
         }
-        .navbar-link.active a{
+        li.active a{
             color:var(--nav-bar-backgroundColor);
         }
     }
 }
 
-#nav2{
+#menu{
     position: fixed;
     right: 0;
     z-index: 1;
@@ -106,14 +106,15 @@ nav{
             background-color: #fff;
             color: var(--nav-bar-backgroundColor);
             width: 230px;
-            padding: .5rem 0;
+            padding: .5rem .2rem;
             text-transform: uppercase;
-            font-size: .8rem;
+            font-size: .9rem;
+           
            }
            .search-form{
                display: flex;
                flex-direction: column;
-              
+               margin: 2rem 0;
                height: 100%;
               
             .searh-name-label{
@@ -140,6 +141,25 @@ nav{
                     cursor: pointer;
                     border:none;
                 }
+            }
+
+            input{
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #fff;
+                color: #fff;
+                margin-top: 3rem;
+                padding: .2rem 0;
+                margin-left: .5rem;
+                &:focus{
+                    outline: none;
+                   
+                }
+            }
+
+            input[type="number"]{
+                width: 30px;
+                text-align: center;
             }
     }
 }

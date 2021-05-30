@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+main .services-panel .jumbotron {
+  margin-left: 3.2rem;
+  width: 100%;
+  height: 300px;
+}
+
+main .services-panel .jumbotron .jumbotron-header {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+main .services-panel .jumbotron .jumbotron-header span {
+  font-family: 'Pattaya', sans-serif;
+}
+
+main .services-panel .jumbotron .vitrain-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .services-panel .jumbotron .vitrain-content .vitrain-image {
+  position: relative;
+  width: 330px;
+  height: 100%;
+  background-color: var(--main-container-backgroundColor);
+  overflow: hidden;
+}
+
+main .services-panel .jumbotron .vitrain-content .vitrain-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .services-panel .jumbotron .vitrain-content .vitrain-image .image-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.432);
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  color: #fff;
+  z-index: 1;
+  font-size: 2rem;
+}
+
+main .services-panel .jumbotron .vitrain-content .vitrain-image .image-description .chief-stars {
+  text-align: center;
+  width: 150px;
+  padding: .5rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 3px solid var(--pink);
+}
+
+main .services-panel .jumbotron .vitrain-content .vitrain-image .image-description .chief-stars i {
+  color: gold;
+  font-size: 1.3rem;
+}
+
+main .services-panel .jumbotron .vitrain-content .vitrain-image .image-description .chief-name {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  padding: .4rem;
+}
+
+main .services-panel .jumbotron .vitrain-content .vitrain-image .image-description .preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .services-panel .jumbotron .vitrain-content .vitrain-image .image-description .preview p, main .services-panel .jumbotron .vitrain-content .vitrain-image .image-description .preview i {
+  font-size: 1rem;
+}
+
+main .services-panel .jumbotron .vitrain-content .vitrain-image:hover {
+  cursor: pointer;
+}
+
+main .services-panel .jumbotron .vitrain-content .vitrain-image:hover .overlay, main .services-panel .jumbotron .vitrain-content .vitrain-image:hover .image-description {
+  visibility: visible;
+}
+
+@media screen and (max-width: 1366px) {
+  main .services-panel .jumbotron .vitrain-content .vitrain-image {
+    width: 240px;
+  }
+}
+/*# sourceMappingURL=services.css.map */
