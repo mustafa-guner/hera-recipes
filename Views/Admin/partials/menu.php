@@ -5,10 +5,10 @@
                 </div>
                 <div class="admin-username">
                     <div class="admin-name">
-                        <span class="text-success">●</span> Mustafa Guner
+                        <span class="text-success">●</span> <?php echo $_SESSION["title"] ?>
                     </div>
                     <div class="admin-role">
-                        superadmin
+                    <?php echo $_SESSION["role"]?>
                     </div>
 
                 </div>
@@ -22,7 +22,7 @@
                 </li>
                 <form method="POST" action="../../Controllers/Admin_Controllers/Logout.php">
                 <li class="admin-tool">
-                   <button type="submit" name="logout">Logout</button>
+                   <button type="submit" class="btn-link btn" style="margin-left:-13px; color:#353535; text-decoration:none"><i class="fas fa-sign-out-alt"></i> Logout</button>
                 </li>
                 </form>
             </ul>

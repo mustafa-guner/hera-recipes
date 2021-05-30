@@ -7,6 +7,7 @@
 
 <?php
 
+//END PONT -> /HERA-RECIPES/
 if(isset($_GET["pageid"])){
     
     $page = $_GET["pageid"];
@@ -14,11 +15,10 @@ if(isset($_GET["pageid"])){
     switch($page) {
 
         case 'index1.php':
-            case "/":
-            $currentPage = "Home";
             include($_SERVER["DOCUMENT_ROOT"].'/HERA-RECIPES/Views/includes/index.php');
+            $currentPage = "Home";
         break;
-    
+
         case 'index2.php':
             include($_SERVER["DOCUMENT_ROOT"].'/HERA-RECIPES/Views/includes/recipes.php');
             $currentPage = "Recipes";
@@ -40,6 +40,8 @@ if(isset($_GET["pageid"])){
         break;
     
         }
+    } else {
+        include($_SERVER["DOCUMENT_ROOT"].'/HERA-RECIPES/Views/includes/index.php');
     }
 ?>
 

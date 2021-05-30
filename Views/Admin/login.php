@@ -1,10 +1,11 @@
 <?php include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Helpers/create_session.php");?>
-<?php include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Controllers/Admin_Controllers/Login.php");?>
 <?php //If user already logged in, redirect him to the CREATE page in ADMIN PANEL
     if(isLoggedIn()){
         $location = "./dashboard.php";
         header("Location: {$location}");
-    } ?>
+    }
+    include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Controllers/Admin_Controllers/Login.php"); 
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
+    <link rel="icon" href="../../public/images/logo.png">
     <link rel="stylesheet" href="../../public/css/admin.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 </head>
@@ -27,17 +29,27 @@
            </div>
           
             <div class="form-block">
-                <form method="POST" action="../../Controllers/Admin_Controllers/Login.php">
+                <form method="POST" action="Login.php">
                     <div class="form-element">
                         <label><i class="fas fa-user"></i> username</label>
                         <input type="text" maxlength="10" placeholder="Enter username" autocomplete="off" name="admin_user">
                     </div>
                     <div class="form-element">
-                        <label><i class="fas fa-key"></i> password</label>
+                        <label><i class="fas fa-key"></i> password </label>
                         <input type="password" maxlength="10" placeholder="Enter password" autocomplete="off" name="admin_pswd">
                     </div>
                     <button type="submit" name="loginAdmin">Login</button>
-                    <div class="error-message" style="background-color:red; color:#fff;"></div>
+                    <div class="error-message" style="background-color:red; color:#fff;"> <?php echo $errorMessage; ?></div>
+                    
+                    <script>
+                            const errorBlock = document.querySelector(".error-message");
+                            console.log(errorBlock.innerHTML.length);
+                            if(errorBlock.innerHTML.length > 0){
+                                setTimeout(() => {
+                                    errorBlock.innerHTML = "";
+                                }, 3000);
+                            }
+                    </script>
                    
                 </form>
             </div>
@@ -49,15 +61,7 @@
                 <p>Login to access your admin panel</p>
             </div>
        </div>
-   </div>
-
-   <?php
-    
-    if(isset($_POST[""]))
-   
-   ?>
-
-   
+   </div>   
 </body>
 </html>
 

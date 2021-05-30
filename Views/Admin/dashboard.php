@@ -1,11 +1,9 @@
 
 <?php 
-    include_once($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Helper/connectDB.php");
-    include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Config/session.php");
-    
+    include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Helpers/connectDB.php");
+    include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Helpers/create_session.php");
      checkLogin();
-
-    
+     
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel | List</title>
+    <link rel="icon" href="../../public/images/logo.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/css/dashboard.css">
@@ -29,7 +28,7 @@
         <?php include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Views/Admin/partials/menu.php"); ?>
         
     
-        <div class="container">
+        <div class="container" style="transform:translate(0%,0);">
             <h1 class="display-4">List Recipes</h1>
             <hr>
             <nav class="navbar navbar-light bg-light">
@@ -46,59 +45,44 @@
                         <th scope="col">Recipe Image </th>
                         <th scope="col">Recipe Calories</th>
                         <th scope="col">Recipe Duration </th>
+                        <th scope="col">Recipe Rating </th>
                         <th scope="col">Recipe Classification </th>
                         <th scope="col">Recipe Ingredients </th>
                         <th scope="col">Recipe Difficulty </th>
                         <th scope="col">Recipe Description </th>
-                        <th scope="col">Admin Actions</th>
+                        <th scope="col">Preperation Steps </th>
+                        <th scope="col">Admin Actions</th> 
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td class="d-flex">
-                            <button class="btn-primary btn btn-sm mr-2">Edit</button>
-                            <button class="btn-danger btn btn-sm">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td class="d-flex">
-                            <button class="btn-primary btn btn-sm mr-2">Edit</button>
-                            <button class="btn-danger btn btn-sm">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td class="d-flex">
-                            <button class="btn-primary btn btn-sm mr-2">Edit</button>
-                            <button class="btn-danger btn btn-sm">Delete</button>
-                        </td>
-                    </tr>
+                <?php
+                        
+                        $select_all = "SELECT * FROM recipe ORDER BY recipe_id DESC";
+                        
+                        if($rows = $connection->query($select_all)){
+                            while($row = mysqli_fetch_array($rows)){
+                                echo "
+                                <tr>
+                                <th scope='row'>{$row['recipe_id']}</th>
+                                <td>{$row['recipe_name']}</td>
+                                <td>{$row['recipe_image']}</td>
+                                <td>{$row['recipe_calory']}</td>
+                                <td>{$row['recipe_duration']}</td>
+                                <td>{$row['recipe_class']}</td>
+                                <td>".substr($row['recipe_ingredients'], 0 ,100)."...</td>
+                                <td>{$row['recipe_difficulty']}</td>
+                                <td>".substr($row['recipe_description'], 0 ,100)."...</td>
+                                <td>{$row['recipe_rating']}</td>
+                                <td>".substr($row['recipe_steps'], 0 ,100)."...</td>
+                                <td class='d-flex'>
+                                    <button class='btn-primary btn btn-sm mr-2'>Edit</button>
+                                    <button class='btn-danger btn btn-sm'>Delete</button>
+                                </td>
+                            </tr>
+                                ";
+                            }
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>

@@ -60,7 +60,7 @@
                 margin: 1rem 0;
                 a{color: #353535; padding: 1rem 0; text-decoration: none;}
                 &:hover{background-color: rgba(247, 247, 247, 0.781);cursor: pointer;}
-              
+               
             }
         }
         .close{
@@ -72,13 +72,17 @@
        }
        
        .container{
+      
            width: 70% !important;
            margin-top: 3rem;
             transform: translate(10%,0%);
            nav{z-index: 1;}
-          table{
-            
-          }
+
+          form{
+            textarea{
+                height: 150px !important;
+            }
+          } 
           
        }
 }

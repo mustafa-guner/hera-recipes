@@ -7,7 +7,7 @@
         </div>
         <ul class="navbar-links">
            
-             <li class="<?php active("index1.php")?>" class="navbar-link">
+             <li class="<?php active("index1.php") || active("/Hera-Recipes/")?>" class="navbar-link">
                 <a href="?pageid=index1.php">Home</a>
              </li>
           

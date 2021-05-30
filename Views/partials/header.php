@@ -8,4 +8,5 @@
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <!--Css folder link-->
     <link rel="stylesheet" href="./public/css/index.css">
+    
 </head>

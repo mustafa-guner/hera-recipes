@@ -94,4 +94,8 @@
 .admin-panel .container nav {
   z-index: 1;
 }
+
+.admin-panel .container form textarea {
+  height: 150px !important;
+}
 /*# sourceMappingURL=dashboard.css.map */
