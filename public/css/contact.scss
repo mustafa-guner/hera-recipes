@@ -1,0 +1,39 @@
+.contact-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .contact-block{
+        max-width: 800px;
+       h1{
+           font-size: 4rem;
+           border-left: 7px solid var(--pink);
+           padding-left: .8rem;
+       }
+       p{
+           margin: 3rem 0 2rem;
+           font-size: 1.5rem;
+       }
+       form{
+       
+        textarea{
+            display: block;
+            resize: none;
+            width: 290px;
+            height: 120px;
+            padding:.2rem .5rem;
+            
+        }
+        button{
+            margin-top: 1rem;
+            padding: .8rem 2rem;
+            background-color: black;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+       }
+    }
+}

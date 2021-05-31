@@ -1,9 +1,9 @@
 
-<?php include("./Views/partials/header.php") ?>
+<?php include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Views/partials/header.php") ?>
 
 <body>
 
-<?php include("./Views/partials/navbar.php") ?>
+<?php include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Views/partials/navbar.php") ?>
 
 <?php
 
@@ -22,16 +22,22 @@ if(isset($_GET["pageid"])){
         case 'index2.php':
             include($_SERVER["DOCUMENT_ROOT"].'/HERA-RECIPES/Views/includes/recipes.php');
             $currentPage = "Recipes";
+
         break;
     
         case 'index3.php':
-            include($_SERVER["DOCUMENT_ROOT"].'/HERA-RECIPES/Views/includes/About.php');
+            include($_SERVER["DOCUMENT_ROOT"].'/HERA-RECIPES/Views/includes/about.php');
             $currentPage = "About";
         break;
 
-         case 'index3.php':
-            include($_SERVER["DOCUMENT_ROOT"].'/HERA-RECIPES/Views/includes/Contact.php');
+         case 'index4.php':
+            include($_SERVER["DOCUMENT_ROOT"].'/HERA-RECIPES/Views/includes/contact.php');
             $currentPage = "Contact";
+        break;
+        
+        case 'index5.php':
+            include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Views/includes/details.php");
+            $currentPage = "Details";
         break;
     
         default:
@@ -44,6 +50,7 @@ if(isset($_GET["pageid"])){
         include($_SERVER["DOCUMENT_ROOT"].'/HERA-RECIPES/Views/includes/index.php');
     }
 ?>
+
 
 <?php include("./Views/partials/scripts.php") ?>
 

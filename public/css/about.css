@@ -1,0 +1,146 @@
+body .about-container {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .about-container .about-informations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .about-container .about-informations .about-image {
+  width: 30%;
+  height: 300px;
+}
+
+body .about-container .about-informations .about-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .about-container .about-informations .about-block {
+  width: 70%;
+}
+
+body .about-container .about-informations .about-block .about-content {
+  padding-left: 1rem;
+}
+
+body .about-container .about-informations .about-block .about-content h1 {
+  border-left: 5px solid var(--pink);
+  padding-left: .8rem;
+}
+
+body .about-container .about-informations .about-block .about-content p {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  margin-top: 2rem;
+}
+
+body .about-container .guest-cards {
+  margin-top: 2rem;
+}
+
+body .about-container .guest-cards h1 {
+  margin: 2rem 0;
+}
+
+body .about-container .guest-cards .guests-block {
+  grid-gap: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .about-container .guest-cards .guests-block .guest-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  height: 230px;
+  color: #fff;
+  background-color: var(--nav-bar-backgroundColor);
+}
+
+body .about-container .guest-cards .guests-block .guest-card .left, body .about-container .guest-cards .guests-block .guest-card .right {
+  position: absolute;
+  top: 10px;
+  color: var(--pink);
+  font-size: 2.2rem;
+}
+
+body .about-container .guest-cards .guests-block .guest-card .left {
+  left: 10px;
+}
+
+body .about-container .guest-cards .guests-block .guest-card .right {
+  right: 10px;
+}
+
+body .about-container .guest-cards .guests-block .guest-card .guest-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0 1rem 0;
+}
+
+body .about-container .guest-cards .guests-block .guest-card .guest-card-header .guest-card-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+body .about-container .guest-cards .guests-block .guest-card .guest-card-header .guest-card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .about-container .guest-cards .guests-block .guest-card .guest-card-header .guest-card-title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: .8rem;
+}
+
+body .about-container .guest-cards .guests-block .guest-card .guest-card-header .guest-card-title span {
+  border-bottom: 2px solid var(--pink);
+}
+
+body .about-container .guest-cards .guests-block .guest-card .guest-card-body p {
+  font-style: italic;
+  line-height: 1.3rem;
+}
+/*# sourceMappingURL=about.css.map */

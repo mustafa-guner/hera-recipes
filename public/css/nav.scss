@@ -67,7 +67,7 @@ nav{
     right: 0;
     z-index: 1;
     border-right: 0.1px solid rgba(235, 232, 232, 0.295);
-    width: 290px;
+    width: 290px; //290
     bottom: 0;
     top: 0;
     height: 100%;
@@ -109,7 +109,7 @@ nav{
             padding: .5rem .2rem;
             text-transform: uppercase;
             font-size: .9rem;
-           
+            
            }
            .search-form{
                display: flex;
@@ -118,7 +118,8 @@ nav{
                height: 100%;
               
             .searh-name-label{
-               
+            
+           
             }
            }
 
@@ -126,8 +127,15 @@ nav{
                
             }
 
-            .search-form-filter{
-               
+            .filter-recipe-label{
+                display: flex;
+                flex-direction: column;
+                
+                     label{
+                        margin-top: 1rem;
+                     }
+                    
+                
             }
 
             .search-form-button{
@@ -161,5 +169,16 @@ nav{
                 width: 30px;
                 text-align: center;
             }
+    }
+}
+
+
+@media screen and (max-width: 1366px) {
+    body{
+        
+        #menu{
+            width: 270px;
+        }
+   
     }
 }

@@ -39,7 +39,7 @@
                         <input type="password" maxlength="10" placeholder="Enter password" autocomplete="off" name="admin_pswd">
                     </div>
                     <button type="submit" name="loginAdmin">Login</button>
-                    <div class="error-message" style="background-color:red; color:#fff;"> <?php echo $errorMessage; ?></div>
+                    <div class="error-message" style="background-color:#fff; color:#DC3545; padding:.3rem 1rem; border-radius:10px; margin:1rem 0;"> <?php echo "$errorMessage"; ?></div>
                     
                     <script>
                             const errorBlock = document.querySelector(".error-message");

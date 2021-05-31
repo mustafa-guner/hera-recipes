@@ -1,7 +1,7 @@
+<?php include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Helpers/connectDB.php");?>
+
 
 <?php
-
-include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Helpers/connectDB.php");
 
 if(isset($_GET["recipe_id"])){
     
@@ -12,19 +12,15 @@ if(isset($_GET["recipe_id"])){
     if($rows = $connection->query($sql)){
         while($row = mysqli_fetch_array($rows)){
             echo "
-            
             <section class='product-section'>
         <div class='product-show'>
             <div class='product-image'>
                 <img src='./public/images/pizza-product.png'>
             </div>
             <div class='product-ingredients'>
-                <h3 class='ingredient-hearding>Ingredients'></h3>
+                <h3 class='ingredient-hearding'>Ingredients</h3>
                 <ul class='ingredients'>
-                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, ipsa.</li>
-                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, ipsa.</li>
-                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, ipsa.</li>
-                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, ipsa.</li>
+                    {$row['recipe_ingredients']}
                 </ul>
             </div>
         </div>
@@ -59,11 +55,8 @@ if(isset($_GET["recipe_id"])){
                 <div class='product-steps'>
                     <h3><i class='fas fa-question'></i> HOW TO MAKE IT</h3>
                     <ol class='steps'>
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>Lorem, ipsum dolor.</li>
+                        {$row['recipe_steps']}
+
                     </ol>
                 </div>
                 <div class='product-steps-image'>

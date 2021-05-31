@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
 main .services-panel .jumbotron {
   margin-left: 3.2rem;
+  margin-top: 5rem;
   width: 100%;
   height: 300px;
 }
@@ -125,6 +126,9 @@ main .services-panel .jumbotron .vitrain-content .vitrain-image:hover .overlay, 
 }
 
 @media screen and (max-width: 1366px) {
+  main .services-panel .jumbotron {
+    margin-top: 2rem;
+  }
   main .services-panel .jumbotron .vitrain-content .vitrain-image {
     width: 240px;
   }

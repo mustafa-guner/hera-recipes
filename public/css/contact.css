@@ -1,0 +1,50 @@
+.contact-container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-container .contact-block {
+  max-width: 800px;
+}
+
+.contact-container .contact-block h1 {
+  font-size: 4rem;
+  border-left: 7px solid var(--pink);
+  padding-left: .8rem;
+}
+
+.contact-container .contact-block p {
+  margin: 3rem 0 2rem;
+  font-size: 1.5rem;
+}
+
+.contact-container .contact-block form textarea {
+  display: block;
+  resize: none;
+  width: 290px;
+  height: 120px;
+  padding: .2rem .5rem;
+}
+
+.contact-container .contact-block form button {
+  margin-top: 1rem;
+  padding: .8rem 2rem;
+  background-color: black;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=contact.css.map */

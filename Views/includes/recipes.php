@@ -1,6 +1,5 @@
 
     <?php include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Helpers/connectDB.php"); ?>
-
     <main>
         <section class="panel recipes-panel">
             <div class="recipes-container">
@@ -16,7 +15,7 @@
                                   {$row['recipe_name']}
                                 </div>
                                 <div class='recipe-image'>
-                                    <img src='../public/images/Recipes/{$row['recipe_image']}'>
+                                    <img src='./public/images/Recipes/{$row['recipe_image']}'>
                                 </div>
                                 <div class='recipe-brief-informations'>
                                     <div class='recipe-text recipe-rank'>
@@ -34,10 +33,10 @@
                             ".substr($row['recipe_description'], 0 ,100)."...
                             </div>
                             <div class='recipe-calory'>
-                            {$row['recipe_calory']}
+                            {$row['recipe_calory']} cal
                             </div>
                             <div class='recipe-button'>
-                                <a href='./Views/includes/details.php?recipe_id={$row['recipe_id']}'>More</a>
+                                <a href='./index.php?pageid=index5.php&recipe_id={$row['recipe_id']}'>More</a>
                             </div>
                         </div>
                             ";
@@ -46,4 +45,9 @@
                 ?>
             </div>
         </section>
+
+        <?php include($_SERVER["DOCUMENT_ROOT"]."/HERA-RECIPES/Views/partials/menu.php"); ?>
+
+        
+     
     </main>

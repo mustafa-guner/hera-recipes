@@ -1,0 +1,104 @@
+
+
+body{.about-container{
+    transform: translate(0%,0%);
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .about-informations{
+        display: flex;
+        .about-image{
+            width:30%;
+            height: 300px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .about-block{
+            width: 70%;
+            .about-content{
+                padding-left: 1rem;
+                
+                h1{
+                    border-left: 5px solid var(--pink);
+                    padding-left: .8rem;
+                    span{
+                       
+                    }
+                }
+                p{
+                    font-size: 1.3rem;
+                    line-height: 1.9rem;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+    .guest-cards{
+        margin-top: 2rem;
+        h1{ margin: 2rem 0;}
+            .guests-block{
+                grid-gap: 30px;
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                .guest-card{
+                    position: relative;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    padding: 1rem;
+                    width: 100%;
+                    height: 230px;
+                    color: #fff;
+                    background-color:var(--nav-bar-backgroundColor);
+                    .left,.right{position: absolute;
+                        top: 10px;
+                        color: var(--pink);
+                        font-size: 2.2rem;
+                    }
+                    .left{
+                        left: 10px;
+                    }
+                    .right{
+                        right: 10px;
+                    }
+                    .guest-card-header{
+                        display: flex;
+                        margin: 2rem 0 1rem 0;
+                        .guest-card-image{
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 100%;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }.guest-card-title{
+                            align-self: center;
+                            padding-left: .8rem;
+                            span{
+                                border-bottom: 2px solid var(--pink);
+                            }
+                        }
+                    } .guest-card-body{
+                        p{
+                            font-style: italic;
+                            line-height: 1.3rem;
+                        }
+                    }
+                }
+            }
+    }
+}}

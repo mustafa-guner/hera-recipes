@@ -7,10 +7,9 @@
 .admin-panel .dashboard {
   position: fixed;
   left: 0;
-  width: 15% !important;
+  width: 12% !important;
   height: calc(100vh - 215px);
   margin-right: 10rem;
-  width: 280px;
   background-color: #fff;
   -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
           box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
@@ -84,18 +83,122 @@
   right: 0;
 }
 
-.admin-panel .container {
+.admin-panel #list-container, .admin-panel #create-container {
+  height: 100%;
+  margin-left: 290px;
   width: 70% !important;
   margin-top: 3rem;
   -webkit-transform: translate(10%, 0%);
           transform: translate(10%, 0%);
 }
 
-.admin-panel .container nav {
+.admin-panel #list-container nav, .admin-panel #create-container nav {
   z-index: 1;
 }
 
-.admin-panel .container form textarea {
+.admin-panel #list-container form textarea, .admin-panel #create-container form textarea {
   height: 150px !important;
+}
+
+.admin-panel .container {
+  -webkit-transform: translate(0%, 0);
+          transform: translate(0%, 0);
+}
+
+@media screen and (max-width: 1366px) {
+  body {
+    overflow-x: hidden;
+  }
+  .admin-panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .admin-panel .dashboard {
+    position: fixed;
+    left: 0;
+    width: 12% !important;
+    height: calc(100vh - 170px);
+    margin-right: 7rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+  }
+  .admin-panel .dashboard .admin-profile {
+    width: 100%;
+  }
+  .admin-panel .dashboard .admin-profile .admin-image {
+    margin: .8rem auto;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .admin-panel .dashboard .admin-profile .admin-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .admin-panel .dashboard .admin-profile .admin-username {
+    text-align: center;
+    font-size: 1rem;
+    color: #B2BEC3;
+  }
+  .admin-panel .dashboard .admin-profile .admin-username .admin-name {
+    color: #636E72;
+  }
+  .admin-panel .dashboard .admin-profile .admin-username .admin-role {
+    font-weight: 500;
+    font-size: .8rem;
+  }
+  .admin-panel .dashboard .admin-tools {
+    overflow: hidden;
+    background-color: #E9ECEF;
+    height: 100%;
+    margin-top: 2em;
+    list-style-type: none;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .admin-panel .dashboard .admin-tools li {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  .admin-panel .dashboard .admin-tools li a {
+    color: #353535;
+    padding: 1rem 0;
+    text-decoration: none;
+    font-size: .8rem;
+  }
+  .admin-panel .dashboard .admin-tools li:hover {
+    background-color: rgba(247, 247, 247, 0.781);
+    cursor: pointer;
+  }
+  .admin-panel .dashboard .admin-tools li button {
+    font-size: .8rem;
+  }
+  .admin-panel .dashboard .close {
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    right: 0;
+  }
+  .admin-panel #list-container {
+    height: 100%;
+    margin-left: 79px;
+    width: 70% !important;
+    margin-top: 3rem;
+    -webkit-transform: translate(10%, 0%);
+            transform: translate(10%, 0%);
+  }
+  .admin-panel #list-container form textarea {
+    height: 150px !important;
+  }
+  #create-container {
+    -webkit-transform: translate(-4%, 0%) !important;
+            transform: translate(-4%, 0%) !important;
+  }
 }
 /*# sourceMappingURL=dashboard.css.map */
